@@ -10,28 +10,23 @@ const componentMap = {
 }
 
 defineProps({
-    'currentEntity': String
+    'currentEntity': String,
+    'isAsideOpen': Boolean
 })
 
 </script>
 
 <template>
-    <main class="w-full overflow-auto">
-        <div class="m-auto sm:w-2/3 bg-red-500">
+
+    <main class="w-full overflow-auto z-10 fixed top-16 bottom-0">
+
+        <div class="m-auto md:w-2/3 ">
             <keep-alive>
                 <component :is="componentMap[currentEntity]" />
             </keep-alive>
-            <Organizations />
-            <Organizations />
-            <Organizations />
-            <Organizations />
-            <Organizations />
-            <Organizations />
-            <Organizations />
-            <Organizations />
-            <Organizations />
-            <Organizations />
+
         </div>
 
     </main>
+
 </template>
