@@ -8,12 +8,10 @@ const props = defineProps({
     'toggleAside': Function
 })
 
-onUpdated(() => console.log(props.isAsideOpen))
-
 // Define as classes para a versão desktop, que empurra o conteúdo
 const asideDesktopClasses = computed(() => {
     return [
-        'h-dvh', 'bg-elight', 'transition-all', 'duration-300', 'p-4',
+        'h-full', 'bg-elight', 'transition-all', 'duration-300', 'p-4',
         'hidden md:block',
         props.isAsideOpen ? 'md:w-60' : 'md:w-22',
         props.isAsideOpen ? 'md:overflow-auto' : 'md:overflow-hidden'
