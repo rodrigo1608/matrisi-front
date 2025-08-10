@@ -27,7 +27,7 @@ const emit = defineEmits(['selectEntity'])
             <li v-for="item in navigationItems" :key="item.name" class="border-b-1 md:border-none border-egray">
 
                 <a :href="item.href" @click.prevent="emit('selectEntity', item.name)"
-                    class="flex gap-1  sm:p-0 sm:px-4 p-4 md:rounded-full hover:bg-egray  active:scale-99 active:bg-elighter">
+                    class="flex gap-1 md:p-0 md:px-4 p-4 md:rounded-full hover:bg-egray  active:scale-99 active:bg-elighter">
 
                     <div class="w-6 h-6 flex justify-center mt-2">
                         <i :class="item.icon" class="text-center text-sm leading-none"></i>

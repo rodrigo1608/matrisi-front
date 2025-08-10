@@ -1,6 +1,6 @@
 <script setup>
 
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import Aside from '@/layouts/Aside.vue'
 import Header from './layouts/Header.vue'
 import Main from './layouts/Main.vue'
@@ -11,20 +11,34 @@ const toggleAside = () => isAsideOpen.value = !isAsideOpen.value
 const currentEntity = ref('Users');
 const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
 
+const smoothWrapperClass = computed(() => {
+  return [
+
+    isAsideOpen ? 'fixed w-full h-full bg-black' : ''
+
+  ]
+})
+
 </script>
 
 <template>
-  <div class="flex flex-col md:flex-row min-h-screen max-h-screen">
+
+  <div class="flex flex-col md:flex-row min-h-screen max-h-screen ">
 
     <Header :toggle-aside="toggleAside" class="md:hidden" />
 
     <Aside :is-aside-open="isAsideOpen" :toggle-aside="toggleAside" @emited-entity="updateEntity" />
 
-    <div class="flex flex-col w-full">
+    <div class="flex flex-col w-full ">
       <Header :toggle-aside="toggleAside" class="hidden md:block" />
 
-      <Main :currentEntity="currentEntity" class="flex-grow overflow-auto" />
+      <!-- Película: escurece o fundo quando aside estiver aberto (mobile) -->
+      <div v-if="isAsideOpen" class="fixed top-16 inset-0 z-20 bg-edarker opacity-50 md:hidden" @click="toggleAside" />
+
+      <Main :currentEntity="currentEntity" :is-aside-open="isAsideOpen" class="flex-grow overflow-auto" />
+
     </div>
 
   </div>
+
 </template>

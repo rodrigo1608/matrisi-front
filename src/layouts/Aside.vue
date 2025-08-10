@@ -8,12 +8,13 @@ const props = defineProps({
     'toggleAside': Function
 })
 
+
 // Define as classes para a versão desktop, que empurra o conteúdo
 const asideDesktopClasses = computed(() => {
     return [
-        'h-full', 'bg-elight', 'transition-all', 'duration-300', 'p-4',
+        'bg-elight', 'transition-all', 'duration-300', 'p-4',
         'hidden md:block',
-        props.isAsideOpen ? 'md:w-60' : 'md:w-22',
+        props.isAsideOpen ? 'md:w-64' : 'md:w-22',
         props.isAsideOpen ? 'md:overflow-auto' : 'md:overflow-hidden'
     ]
 })
@@ -35,7 +36,8 @@ const emitSelectedEntity = (selectedEntity) => emit('emitedEntity', selectedEnti
 <template>
     <!-- Versão Mobile (com animação de deslizar) -->
     <Transition name="slide">
-        <aside v-if="isAsideOpen" class="md:hidden h-dvh bg-elight w-full transition-transform duration-300 transform">
+        <aside v-if="isAsideOpen"
+            class="md:hidden bg-blue-400 relative top-16 z-30 h-dvh bg-elight  w-2/3 transition-transform duration-300 transform">
             <AsideNavigation :navigation-items="navigationItems" :is-aside-open="props.isAsideOpen"
                 @select-entity="emitSelectedEntity" />
         </aside>
