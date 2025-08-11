@@ -13,8 +13,8 @@ const props = defineProps({
 const asideDesktopClasses = computed(() => {
     return [
         'bg-elight', 'transition-all', 'duration-300', 'p-4',
-        'hidden md:block',
-        props.isAsideOpen ? 'md:w-64' : 'md:w-22',
+        'hidden md:block box-border',
+        props.isAsideOpen ? 'md:w-64' : 'md:w-24',
         props.isAsideOpen ? 'md:overflow-auto' : 'md:overflow-hidden'
     ]
 })
