@@ -13,8 +13,8 @@ const users = [
 
     <div class="mt-8 mx-auto  flex flex-col gap-1 ">
 
-        <header class="bg-elight text-lg px-4 rounded-t-2xl font-semibold">
-            <h1 class="font-[Crimson_Pro]  font-bold text-gray-800">User Management</h1>
+        <header class="bg-elight text-lg px-4 rounded-t-2xl ">
+            <h1 class="font-[Crimson_Pro]  text-lg font-semibold">User Management</h1>
             <button class="bg-edark-gray text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
                 create new user
             </button>
