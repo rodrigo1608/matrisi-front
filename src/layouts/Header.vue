@@ -1,6 +1,6 @@
 <script setup>
-import Avatar from '@/Avatar.vue';
-import MenuButton from '@/MenuButton.vue';
+import Avatar from '@/buttons/Avatar.vue';
+import MenuButton from '@/buttons/MenuButton.vue';
 
 defineProps({
     'toggleAside': {
@@ -13,7 +13,7 @@ defineProps({
 
 <template>
 
-    <header class="h-16 px-4 fixed z-40 md:z-0 top-0 w-full md-block">
+    <header class="h-16 px-4  md:z-0 top-0 w-full">
 
         <nav class="flex h-full justify-between items-center">
             <MenuButton @toggle="toggleAside" class="md:hidden" />

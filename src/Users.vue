@@ -1,11 +1,11 @@
-<script setup></script>
 <script setup>
+import DefaultButton from './buttons/DefaultButton.vue';
 // Você pode adicionar a lógica para buscar os usuários aqui
 const users = [
-  { id: 1, name: 'João Silva', email: 'joao.silva@example.com', role: 'Administrador' },
-  { id: 2, name: 'Maria Souza', email: 'maria.souza@example.com', role: 'Editor' },
-  { id: 3, name: 'Pedro Santos', email: 'pedro.santos@example.com', role: 'Usuário' },
-  { id: 4, name: 'Ana Oliveira', email: 'ana.oliveira@example.com', role: 'Usuário' },
+    { id: 1, name: 'João Silva', email: 'joao.silva@example.com', role: 'Administrador' },
+    { id: 2, name: 'Maria Souza', email: 'maria.souza@example.com', role: 'Editor' },
+    { id: 3, name: 'Pedro Santos', email: 'pedro.santos@example.com', role: 'Usuário' },
+    { id: 4, name: 'Ana Oliveira', email: 'ana.oliveira@example.com', role: 'Usuário' },
 ]
 </script>
 
@@ -15,9 +15,7 @@ const users = [
 
         <header class="bg-elight text-lg px-4 rounded-t-2xl ">
             <h1 class="font-[Crimson_Pro]  text-lg font-semibold">User Management</h1>
-            <button class="bg-edark-gray text-white px-4 py-2 rounded-full hover:bg-blue-700 transition-colors">
-                create new user
-            </button>
+            <DefaultButton :iconClasses="'fa-solid fa-user-plus'" :label="'create user'" />
         </header>
 
         <div class="bg-white rounded-xl shadow overflow-hidden">
