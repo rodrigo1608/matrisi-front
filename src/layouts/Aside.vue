@@ -1,6 +1,6 @@
 <script setup>
 import { computed, ref, onUpdated } from 'vue'
-import MenuButton from '@/MenuButton.vue'
+import MenuButton from '@/buttons/MenuButton.vue'
 import AsideNavigation from '@/AsideNavigation.vue'
 
 const props = defineProps({

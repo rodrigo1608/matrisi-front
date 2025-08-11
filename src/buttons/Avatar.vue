@@ -1,6 +1,6 @@
 <template>
     <button
-        class="group relative flex items-center justify-center w-8 h-8 rounded-full font-medium overflow-hidden transition-colors "
+        class="group relative cursor-pointer flex items-center justify-center w-8 h-8 rounded-full font-medium overflow-hidden transition-colors "
         @click="handleClick" :aria-label="ariaLabel">
 
         <img v-if="imageUrl && !imageLoadError" :src="imageUrl" :alt="altText" class="object-cover w-full h-full"

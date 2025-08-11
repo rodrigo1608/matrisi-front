@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import UserFormInput from '@/forms/UserFormInput.vue';
+import DefaultButton from '@/buttons/DefaultButton.vue';
 
 // Variaveis reativas para os campos do formulario
 const userData = ref({
@@ -57,36 +58,26 @@ const registerUser = () => {
 <template>
 
     <div class="mt-8 mx-auto sm:max-w-md flex flex-col gap-1 ">
-        <div class="bg-elight font-[Crimson_Pro] text-lg px-4 rounded-t-2xl font-semibold">Register
+
+        <header class="bg-elight font-[Crimson_Pro] text-lg px-4 rounded-t-2xl font-semibold">Register
             New
             User
-        </div>
+        </header>
 
         <form action="" class="p-4 space-y-6 bg-elight py-8 ">
             <UserFormInput v-for="input in inputsAttributes" :input=input :key="input.forId"
                 v-model="userData[input.name]" />
         </form>
 
-        <div class="bg-elight 
+        <footer class="bg-elight 
         text-lg p-4 
         rounded-b-2xl 
         flex justify-end 
         font-semibold">
 
-            <button @click=registerUser class="bg-edark-gray 
-                text-elight px-4 py-2 
-                text-sm font-medium 
-                rounded-full 
-                hover:bg-edark 
-                cursor-pointer 
-                active:scale-99 
-                active:bg-edarker">
+            <DefaultButton :icon-classes="'fa-solid fa-arrow-right mr-2'" />
 
-                <i class="fa-solid fa-arrow-right mr-2"></i>
-                Register
-            </button>
-
-        </div>
+        </footer>
 
     </div>
 
