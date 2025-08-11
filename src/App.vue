@@ -11,14 +11,6 @@ const toggleAside = () => isAsideOpen.value = !isAsideOpen.value
 const currentEntity = ref('Users');
 const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
 
-const smoothWrapperClass = computed(() => {
-  return [
-
-    isAsideOpen ? 'fixed w-full h-full bg-black' : ''
-
-  ]
-})
-
 </script>
 
 <template>
