@@ -8,6 +8,17 @@ const users = [
     { id: 2, name: 'Maria Souza', email: 'maria.souza@example.com', role: 'Editor' },
     { id: 3, name: 'Pedro Santos', email: 'pedro.santos@example.com', role: 'Usuário' },
     { id: 4, name: 'Ana Oliveira', email: 'ana.oliveira@example.com', role: 'Usuário' },
+    { id: 5, name: 'Carlos Lima', email: 'carlos.lima@example.com', role: 'Usuário' },
+    { id: 6, name: 'Fernanda Rocha', email: 'fernanda.rocha@example.com', role: 'Editor' },
+    { id: 7, name: 'Bruno Costa', email: 'bruno.costa@example.com', role: 'Administrador' },
+    { id: 8, name: 'Luiza Ferreira', email: 'luiza.ferreira@example.com', role: 'Usuário' },
+    { id: 9, name: 'Ricardo Dias', email: 'ricardo.dias@example.com', role: 'Editor' },
+    { id: 10, name: 'Mariana Pires', email: 'mariana.pires@example.com', role: 'Usuário' },
+    { id: 11, name: 'Gustavo Neves', email: 'gustavo.neves@example.com', role: 'Administrador' },
+    { id: 12, name: 'Isabela Mendes', email: 'isabela.mendes@example.com', role: 'Usuário' },
+    { id: 13, name: 'Daniel Souza', email: 'daniel.souza@example.com', role: 'Editor' },
+    { id: 14, name: 'Patrícia Gomes', email: 'patricia.gomes@example.com', role: 'Usuário' },
+    { id: 15, name: 'Marcelo Pires', email: 'marcelo.pires@example.com', role: 'Usuário' },
 ]
 
 const requestNewUser = () => console.log('Create new user requested')
@@ -16,17 +27,18 @@ const requestNewUser = () => console.log('Create new user requested')
 
 <template>
 
-    <div class="flex flex-col gap-1">
+    <div class="flex flex-col gap-1 h-full">
 
-        <header class="bg-elight text-lg px-4 py-2 px-4 rounded-t-2xl flex justify-between">
+        <header class="bg-elight text-lg px-4 py-2rounded-t-2xl flex justify-between">
             <h1 class="font-[Crimson_Pro]  text-lg font-semibold">User Management</h1>
             <DefaultButton @click='requestNewUser' :iconClasses="'fa-solid fa-user-plus'" :label="'create user'"
                 :aria-label="'Button to request to create a new user'" />
         </header>
 
-        <div class="bg-white rounded-xl shadow overflow-hidden">
-            <table class="min-w-full divide-y divide-gray-200">
-                <thead class="bg-gray-50">
+        <div class="bg-elight flex-1 overflow-y-auto">
+
+            <table class="min-w-full divide-y divide-egray">
+                <thead class="bg-gray-50 sticky top-0 z-10">
                     <tr>
                         <th scope="col"
                             class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID

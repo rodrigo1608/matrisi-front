@@ -20,9 +20,27 @@ defineProps({
 
 <template>
 
-    <main class="w-full md:flex justify-center overflow-auto z-10 fixed top-16 bottom-0 p-4 md:p-0">
+    <main class="
+    w-full 
+    md:flex 
+    justify-center 
+    overflow-auto 
+    z-10 
+    fixed 
+    top-16 
+    bottom-0 
+    p-4 md:p-0 
+    h-full 
+    max-h-88">
 
-        <div class="md:w-3/5 transition-[margin] duration-300" :class="[isAsideOpen ? 'md:mr-64' : 'md:mr-24']">
+        <div class="
+        md:w-3/5 
+        transition-[margin] 
+        duration-300
+        " :class="[isAsideOpen ?
+            'md:mr-64' :
+            'md:mr-24']
+            ">
             <keep-alive>
                 <component :is="componentMap[currentEntity]" />
             </keep-alive>
