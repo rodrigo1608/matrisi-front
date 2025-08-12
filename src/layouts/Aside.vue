@@ -37,7 +37,7 @@ const emitSelectedEntity = (selectedEntity) => emit('emitedEntity', selectedEnti
     <!-- Versão Mobile (com animação de deslizar) -->
     <Transition name="slide">
         <aside v-if="isAsideOpen"
-            class="md:hidden bg-blue-400 relative top-16 z-30 h-dvh bg-elight  w-2/3 transition-transform duration-300 transform">
+            class="md:hidden fixed top-16 z-30 h-dvh box-border bg-elight w-2/3 transition-transform duration-300 transform">
             <AsideNavigation :navigation-items="navigationItems" :is-aside-open="props.isAsideOpen"
                 @select-entity="emitSelectedEntity" />
         </aside>
