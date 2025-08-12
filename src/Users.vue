@@ -1,5 +1,7 @@
 <script setup>
+
 import DefaultButton from './buttons/DefaultButton.vue';
+
 // Você pode adicionar a lógica para buscar os usuários aqui
 const users = [
     { id: 1, name: 'João Silva', email: 'joao.silva@example.com', role: 'Administrador' },
@@ -7,15 +9,19 @@ const users = [
     { id: 3, name: 'Pedro Santos', email: 'pedro.santos@example.com', role: 'Usuário' },
     { id: 4, name: 'Ana Oliveira', email: 'ana.oliveira@example.com', role: 'Usuário' },
 ]
+
+const requestNewUser = () => console.log('Create new user requested')
+
 </script>
 
 <template>
 
-    <div class="mt-8 mx-auto  flex flex-col gap-1 ">
+    <div class="flex flex-col gap-1">
 
-        <header class="bg-elight text-lg px-4 rounded-t-2xl ">
+        <header class="bg-elight text-lg px-4 py-2 px-4 rounded-t-2xl flex justify-between">
             <h1 class="font-[Crimson_Pro]  text-lg font-semibold">User Management</h1>
-            <DefaultButton :iconClasses="'fa-solid fa-user-plus'" :label="'create user'" />
+            <DefaultButton @click='requestNewUser' :iconClasses="'fa-solid fa-user-plus'" :label="'create user'"
+                :aria-label="'Button to request to create a new user'" />
         </header>
 
         <div class="bg-white rounded-xl shadow overflow-hidden">

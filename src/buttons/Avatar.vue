@@ -6,7 +6,7 @@
         <img v-if="imageUrl && !imageLoadError" :src="imageUrl" :alt="altText" class="object-cover w-full h-full"
             @error="handleImageError" />
         <span v-else-if="!imageLoadError" class="bg-gray-200 w-full h-full flex items-center justify-center">{{ initials
-        }}</span>
+            }}</span>
 
         <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-20 transition-opacity duration-200"></div>
     </button>
