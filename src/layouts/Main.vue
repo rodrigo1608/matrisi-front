@@ -19,19 +19,22 @@ defineProps({
 </script>
 
 <template>
-
     <main class="
-    w-full 
-    md:flex 
-    justify-center 
-    overflow-auto 
+    w-full
+    border
+    border-8
+    flex
+    flex-column 
+    justify-center
+    items-center
     z-10 
     fixed 
-    top-16 
-    bottom-0 
-    p-4 md:p-0 
-    h-full 
-    max-h-88">
+    top-16     
+    py-4 
+    px-2
+    flex-1 
+    bg-red-600
+    ">
 
         <div class="
         md:w-3/5 
@@ -42,7 +45,7 @@ defineProps({
             'md:mr-24']
             ">
             <keep-alive>
-                <component :is="componentMap[currentEntity]" />
+                <!-- <component :is="componentMap[currentEntity]" /> -->
             </keep-alive>
         </div>
 
