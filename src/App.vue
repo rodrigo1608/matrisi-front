@@ -19,7 +19,8 @@ const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
   flex
   flex-col 
   md:flex-row  
-  min-h-full
+  min-h-dvh
+  max-h-dvh
   w-full 
   ">
 
@@ -30,9 +31,9 @@ const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
     <div class="
     flex-1
     flex 
-    flex-col   
-    
-  ">
+    flex-col
+    max-h-full   
+    ">
 
       <Header :toggle-aside="toggleAside" class="hidden md:block" />
 

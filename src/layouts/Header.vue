@@ -14,7 +14,7 @@ defineProps({
 <template>
 
     <header class="
-        h-16 
+        min-h-16
         px-4 
         w-full
         ">
