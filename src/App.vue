@@ -20,8 +20,7 @@ const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
   flex-col 
   md:flex-row  
   min-h-full
-  w-full
-  
+  w-full 
   ">
 
     <Header :toggle-aside="toggleAside" class="md:hidden" />
@@ -29,10 +28,10 @@ const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
     <Aside :is-aside-open="isAsideOpen" :toggle-aside="toggleAside" @emited-entity="updateEntity" />
 
     <div class="
+    flex-1
     flex 
-    flex-col 
-    h-full 
-    w-full  
+    flex-col   
+    
   ">
 
       <Header :toggle-aside="toggleAside" class="hidden md:block" />
@@ -45,7 +44,7 @@ const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
       z-20 
       bg-edarker 
       opacity-50 
-      md:hidden
+      md:hidden      
       " @click="toggleAside" />
 
       <Main :currentEntity="currentEntity" :is-aside-open="isAsideOpen" />
