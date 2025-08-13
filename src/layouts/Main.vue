@@ -20,13 +20,14 @@ defineProps({
 
 <template>
     <main class="
-    flex-1
-    border
-    border-8    
+    flex-1   
     py-4
     px-2
+    h-full
+    bg-red-400
+    border
+    border-8    
     ">
-
         <div class="
         md:w-3/5 
         transition-[margin] 
