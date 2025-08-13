@@ -19,25 +19,27 @@ defineProps({
 </script>
 
 <template>
-    <main class="
-    flex-1   
+    <main class="    
     py-4
-    px-2
-    h-full
+    px-2    
     bg-red-400
     border
-    border-8    
+    border-8
+    h-[calc(100%-4rem)]
     ">
-        <div class="
+        <div class="        
         md:w-3/5 
         transition-[margin] 
         duration-300
+        h-full
+        overflow-y-auto
         " :class="[isAsideOpen ?
             'md:mr-64' :
             'md:mr-24']
             ">
+
             <keep-alive>
-                <!-- <component :is="componentMap[currentEntity]" /> -->
+                <component :is="componentMap[currentEntity]" />
             </keep-alive>
         </div>
 
