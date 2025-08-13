@@ -13,11 +13,28 @@ defineProps({
 
 <template>
 
-    <header class="h-16 px-4 md:z-0 top-0 w-full fixed">
-
-        <nav class="flex h-full justify-between items-center">
+    <header class="
+        h-16 
+        px-4 
+        w-full
+        ">
+        <nav class="
+            flex 
+            h-full 
+            justify-between 
+            items-center
+            ">
             <MenuButton @toggle="toggleAside" class="md:hidden" />
-            <a href="#" class="font-[Crimson_Pro] text-gray-500 text-lg tracking-wider font-semibold">Matrisi</a>
+
+            <a href="#" class="
+            font-[Crimson_Pro] 
+            text-gray-500 
+            text-lg 
+            tracking-wider 
+            font-semibold
+            ">
+                Matrisi
+            </a>
             <Avatar />
         </nav>
 

@@ -20,20 +20,11 @@ defineProps({
 
 <template>
     <main class="
-    w-full
+    flex-1
     border
-    border-8
-    flex
-    flex-column 
-    justify-center
-    items-center
-    z-10 
-    fixed 
-    top-16     
-    py-4 
+    border-8    
+    py-4
     px-2
-    flex-1 
-    bg-red-600
     ">
 
         <div class="
