@@ -21,11 +21,9 @@ defineProps({
 <template>
     <main class="    
     py-4
-    px-2    
-    bg-red-400
-    border
-    border-8
-    h-[calc(100%-4rem)]
+    px-2  
+    flex-1
+    max-h-full   
     ">
         <div class="        
         md:w-3/5 
@@ -33,11 +31,12 @@ defineProps({
         duration-300
         h-full
         overflow-y-auto
+        mx-auto
+        max-h-[calc(100%-4rem)]  
         " :class="[isAsideOpen ?
-            'md:mr-64' :
-            'md:mr-24']
+            'md:ml-64' :
+            'md:ml-24']
             ">
-
             <keep-alive>
                 <component :is="componentMap[currentEntity]" />
             </keep-alive>

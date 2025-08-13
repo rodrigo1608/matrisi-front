@@ -19,6 +19,21 @@ const users = [
     { id: 13, name: 'Daniel Souza', email: 'daniel.souza@example.com', role: 'Editor' },
     { id: 14, name: 'Patrícia Gomes', email: 'patricia.gomes@example.com', role: 'Usuário' },
     { id: 15, name: 'Marcelo Pires', email: 'marcelo.pires@example.com', role: 'Usuário' },
+    { id: 16, name: 'Aline Martins', email: 'aline.martins@example.com', role: 'Editor' },
+    { id: 17, name: 'Felipe Cabral', email: 'felipe.cabral@example.com', role: 'Usuário' },
+    { id: 18, name: 'Juliana Castro', email: 'juliana.castro@example.com', role: 'Administrador' },
+    { id: 19, name: 'Lucas Gomes', email: 'lucas.gomes@example.com', role: 'Usuário' },
+    { id: 20, name: 'Camila Ribeiro', email: 'camila.ribeiro@example.com', role: 'Usuário' },
+    { id: 21, name: 'Rafael Santos', email: 'rafael.santos@example.com', role: 'Editor' },
+    { id: 22, name: 'Beatriz Almeida', email: 'beatriz.almeida@example.com', role: 'Usuário' },
+    { id: 23, name: 'Vinícius Fernandes', email: 'vinicius.fernandes@example.com', role: 'Administrador' },
+    { id: 24, name: 'Sophia Costa', email: 'sophia.costa@example.com', role: 'Usuário' },
+    { id: 25, name: 'Eduardo Pereira', email: 'eduardo.pereira@example.com', role: 'Usuário' },
+    { id: 26, name: 'Gabriela Nunes', email: 'gabriela.nunes@example.com', role: 'Editor' },
+    { id: 27, name: 'Henrique Cardoso', email: 'henrique.cardoso@example.com', role: 'Usuário' },
+    { id: 28, name: 'Larissa Lima', email: 'larissa.lima@example.com', role: 'Administrador' },
+    { id: 29, name: 'Tiago Santos', email: 'tiago.santos@example.com', role: 'Usuário' },
+    { id: 30, name: 'Letícia Ferreira', email: 'leticia.ferreira@example.com', role: 'Usuário' },
 ]
 
 const requestNewUser = () => console.log('Create new user requested')
