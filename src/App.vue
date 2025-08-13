@@ -15,21 +15,42 @@ const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
 
 <template>
 
-  <div class="flex flex-col md:flex-row min-h-screen max-h-screen ">
+  <div class="
+  flex
+  flex-col 
+  md:flex-row 
+  min-h-screen
+  max-h-screen
+  ">
 
     <Header :toggle-aside="toggleAside" class="md:hidden" />
 
     <Aside :is-aside-open="isAsideOpen" :toggle-aside="toggleAside" @emited-entity="updateEntity" />
 
-    <div class="flex flex-col w-full ">
+    <div class="
+    flex 
+    flex-col 
+    h-full 
+    w-full 
+    border 
+    border-8 
+    border-blue">
       <Header :toggle-aside="toggleAside" class="hidden md:block" />
 
       <!-- Película: escurece o fundo quando aside estiver aberto (mobile) -->
-      <div v-if="isAsideOpen" class="fixed top-16 inset-0 z-20 bg-edarker opacity-50 md:hidden" @click="toggleAside" />
+      <div v-if="isAsideOpen" class="
+      fixed 
+      top-16 
+      inset-0 
+      z-20 
+      bg-edarker 
+      opacity-50 
+      md:hidden
+      " @click="toggleAside" />
 
-      <Main :currentEntity="currentEntity" :is-aside-open="isAsideOpen" class="flex-grow overflow-auto" />
-
+      <Main :currentEntity="currentEntity" :is-aside-open="isAsideOpen" />
     </div>
+
 
   </div>
 

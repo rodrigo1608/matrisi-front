@@ -29,15 +29,16 @@ const requestNewUser = () => console.log('Create new user requested')
 
     <div class="flex flex-col gap-1 h-full">
 
-        <header class="bg-elight text-lg px-4 py-2rounded-t-2xl flex justify-between">
-            <h1 class="font-[Crimson_Pro]  text-lg font-semibold">User Management</h1>
+        <header class="bg-elight text-lg px-4 py-2 rounded-t-2xl flex justify-between items-center">
+            <h1 class="font-[Crimson_Pro] text-lg font-semibold">User Management</h1>
             <DefaultButton @click='requestNewUser' :iconClasses="'fa-solid fa-user-plus'" :label="'create user'"
                 :aria-label="'Button to request to create a new user'" />
         </header>
 
-        <div class="bg-elight flex-1 overflow-y-auto">
+        <div class="bg-elight  overflow-y-auto max-h-92">
 
-            <table class="min-w-full divide-y divide-egray">
+            <table class="divide-y divide-egray  h-90 overflow-y-auto">
+
                 <thead class="bg-gray-50 sticky top-0 z-10">
                     <tr>
                         <th scope="col"
@@ -68,6 +69,7 @@ const requestNewUser = () => console.log('Create new user requested')
                     </tr>
                 </tbody>
             </table>
+
         </div>
 
     </div>

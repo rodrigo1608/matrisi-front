@@ -13,7 +13,7 @@ defineProps({
 
 <template>
 
-    <header class="h-16 px-4  md:z-0 top-0 w-full">
+    <header class="h-16 px-4 md:z-0 top-0 w-full fixed">
 
         <nav class="flex h-full justify-between items-center">
             <MenuButton @toggle="toggleAside" class="md:hidden" />
