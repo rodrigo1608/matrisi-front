@@ -17,32 +17,30 @@ defineProps({
 })
 
 </script>
-
 <template>
     <main class="    
     py-4
     px-2  
     flex-1
-    max-h-full   
+    flex
+    justify-center
+    items-center  
+    max-h-[calc(100%-4rem)]
     ">
-        <div class="        
-        md:w-3/5 
-        transition-[margin] 
-        duration-300
+        <div class="  
+        w-full
+        flex-1
+  
+        transition-[max-width]  duration-300
         h-full
         overflow-y-auto
-        mx-auto
-        max-h-[calc(100%-4rem)]  
         " :class="[isAsideOpen ?
-            'md:ml-64' :
-            'md:ml-24']
-            ">
+            ' md:max-w-[calc(60%+10rem)]' : 'md:max-w-3/5']">
             <keep-alive>
                 <component :is="componentMap[currentEntity]" />
             </keep-alive>
         </div>
 
     </main>
-    <!-- <component :is="componentMap['UserForm']" :is-aside-open="isAsideOpen" /> -->
-
 </template>
+<!-- <component :is="componentMap['UserForm']" :is-aside-open="isAsideOpen" /> -->

@@ -36,47 +36,46 @@ const users = [
     { id: 30, name: 'Letícia Ferreira', email: 'leticia.ferreira@example.com', role: 'Usuário' },
 ]
 
+
+const tableHeaders = ['ID', 'Nome', 'Email', 'Permissão', 'Ações'];
+
 const requestNewUser = () => console.log('Create new user requested')
 
 </script>
 
 <template>
 
-    <div class="flex flex-col gap-1 h-full">
+    <div class="flex flex-col gap-1 h-full flex-1">
 
         <header class="bg-elight text-lg px-4 py-2 rounded-t-2xl flex justify-between items-center">
+
             <h1 class="font-[Crimson_Pro] text-lg font-semibold">User Management</h1>
+
             <DefaultButton @click='requestNewUser' :iconClasses="'fa-solid fa-user-plus'" :label="'create user'"
                 :aria-label="'Button to request to create a new user'" />
+
         </header>
 
-        <div class="bg-elight  overflow-y-auto max-h-92">
+        <div class="bg-elight overflow-y-auto">
 
-            <table class="divide-y divide-egray  h-90 overflow-y-auto">
+            <table class="divide-y   h-90">
 
-                <thead class="bg-gray-50 sticky top-0 z-10">
+                <thead class="bg-elight sticky top-0 z-10">
                     <tr>
-                        <th scope="col"
-                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID
+                        <th v-for="header in tableHeaders" :key="header" scope="col"
+                            class="px-6 py-3 text-left text-xs font-semibold text-edark-gray uppercase tracking-wider"
+                            :class="{ 'relative': header === 'Ações' }">
+                            <span v-if="header === 'Ações'" class="sr-only">{{ header }}</span>
+                            <span v-else>{{ header }}</span>
                         </th>
-                        <th scope="col"
-                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome
-                        </th>
-                        <th scope="col"
-                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email
-                        </th>
-                        <th scope="col"
-                            class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                            Permissão</th>
-                        <th scope="col" class="relative px-6 py-3"><span class="sr-only">Ações</span></th>
                     </tr>
                 </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
+                <tbody class="bg-elight divide-y divide-gray-200">
                     <tr v-for="user in users" :key="user.id">
-                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">{{ user.id }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ user.name }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ user.email }}</td>
-                        <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{{ user.role }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-edark-gray">{{ user.id }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">{{ user.name }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">{{ user.email }}</td>
+                        <td class="px-6 py-4 whitespace-nowrap text-sm">{{ user.role }}</td>
                         <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                             <a href="#" class="text-indigo-600 hover:text-indigo-900 mr-4">Editar</a>
                             <a href="#" class="text-red-600 hover:text-red-900">Excluir</a>
