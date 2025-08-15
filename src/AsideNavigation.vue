@@ -24,18 +24,38 @@ const emit = defineEmits(['selectEntity'])
 <template>
     <nav class="mt-4">
         <ul>
-            <li v-for="item in navigationItems" :key="item.name" class="border-b-1 md:border-none border-egray">
+            <li v-for="item in navigationItems" :key="item.name" class="
+            border-b-1 
+            md:border-none 
+            border-egray
+            ">
 
-                <a :href="item.href" @click.prevent="emit('selectEntity', item.name)"
-                    class="flex gap-1 md:p-0 md:px-4 p-4 md:rounded-full hover:bg-egray  active:scale-99 active:bg-elighter">
+                <a :href="item.href" @click.prevent="emit('selectEntity', item.name)" class="flex 
+                    gap-1
+                    p-4 
+                    md:p-0 
+                    md:px-4 
+                    md:rounded-full 
+                    hover:bg-egray  
+                    active:scale-99 
+                    active:bg-elighter">
 
                     <div class="w-6 h-6 flex justify-center mt-2">
-                        <i :class="item.icon" class="text-center text-sm leading-none"></i>
+                        <i :class="item.icon" class="
+                        text-center 
+                        text-sm 
+                        leading-none"></i>
                     </div>
 
-                    <span
-                        class="flex justify-center items-center overflow-hidden pt-2 leading-none p-0 m-0 whitespace-nowrap transition-[max-width,opacity] duration-300"
-                        :class="isAsideOpen ? 'inline-block' : 'hidden'">
+                    <span class="
+                        flex 
+                        justify-center 
+                        items-center 
+                        overflow-ellipsis 
+                        pt-2 leading-none 
+                        p-0 m-0 
+                        whitespace-nowrap
+                      " :class="isAsideOpen ? 'inline-block' : 'hidden'">
                         {{ item.name }}
                     </span>
                 </a>
