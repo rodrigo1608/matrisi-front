@@ -30,12 +30,12 @@ defineProps({
         <div class="  
         w-full
         flex-1
-  
+  md:max-w-3/5
         transition-[max-width]  duration-300
         h-full
         overflow-y-auto
         " :class="[isAsideOpen ?
-            ' md:max-w-[calc(60%+10rem)]' : 'md:max-w-3/5']">
+            'md:max-w-[calc(60%+6rem)]' : 'md:max-w-3/5']">
             <keep-alive>
                 <component :is="componentMap[currentEntity]" />
             </keep-alive>
