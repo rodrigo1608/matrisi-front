@@ -28,6 +28,8 @@ const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
     flex 
     flex-col
     h-full    
+    items-center justify-center   
+    flex   
     ">
 
       <!-- <Header class="hidden md:block" /> -->
@@ -40,10 +42,11 @@ const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
       z-20 
       bg-edarker 
       opacity-50 
-      md:hidden      
+      md:hidden
+      
       " />
       <!-- <Main :currentEntity="currentEntity" :is-aside-open="isAsideOpen" /> -->
-      Aqui
+
     </div>
   </div>
 
