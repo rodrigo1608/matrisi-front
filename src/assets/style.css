@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+    --color-mlighter: #ECEEEB;
+    --color-mgray: #D8DBD9;
+    --color-mblue-light: #C5F8F9;
+    --color-mblue: #2FA1C0;
+    --color-mred: #95141E;
+    --color-mblack: #070707;
+}
+
+/* Remove o outline padrão apenas para elementos que NÃO usam teclado */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Adiciona um outline personalizado para foco acessível (teclado) */
+:focus-visible {
+    outline: 1px solid #95141E;
+    outline-offset: 1px;
+    box-shadow: 0 0 0 2px rgba(38, 38, 38, 0.1);
+
+}
+
+.max-h-92 {
+    max-height: 92%
+}
