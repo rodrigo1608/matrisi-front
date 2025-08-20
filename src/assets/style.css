@@ -1,12 +1,18 @@
 @import "tailwindcss";
 
 @theme {
-    --color-mlighter: #ECEEEB;
-    --color-mgray: #D8DBD9;
-    --color-mblue-light: #C5F8F9;
-    --color-mblue: #2FA1C0;
-    --color-mred: #95141E;
-    --color-mblack: #070707;
+    --color-lighter: #E4E4E4;
+    --color-light: #D6D6D6;
+    --color-gray: #C8C8C8;
+
+    --color-dark-gray: #404040;
+    --color-dark: #2C2C2C;
+    --color-darker: #181818;
+
+
+    --color-highlight: #95141E;
+    --color-brand: #2FA1C0;
+    --color-accent: #C5F8F9
 }
 
 /* Remove o outline padrão apenas para elementos que NÃO usam teclado */
