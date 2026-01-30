@@ -5,10 +5,6 @@ import { ref } from 'vue'
 // import Header from './layouts/Header.vue'
 // import Main from './layouts/Main.vue'
 
-
-
-
-
 const currentEntity = ref('Users');
 const updateEntity = (selectedEntity) => currentEntity.value = selectedEntity
 
